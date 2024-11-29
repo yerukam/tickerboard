@@ -1,0 +1,255 @@
+15:59:23,214 yfinance DEBUG Entering download()
+15:59:23,214 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+15:59:23,214 yfinance DEBUG  Entering history()
+15:59:23,219 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+15:59:23,220 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+15:59:23,243 yfinance DEBUG   Entering history()
+15:59:23,245 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 15:59:23-04:00', 'period2': '2024-03-31 06:29:23-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+15:59:23,245 yfinance DEBUG    Entering get()
+15:59:23,245 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+15:59:23,245 yfinance DEBUG params={'period1': 1711310363, 'period2': 1711880963, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+15:59:23,245 yfinance DEBUG     Entering _get_cookie_and_crumb()
+15:59:23,245 yfinance DEBUG cookie_mode = 'basic'
+15:59:23,245 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+15:59:23,246 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+15:59:23,247 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+15:59:23,247 yfinance DEBUG loaded persistent cookie
+15:59:23,247 yfinance DEBUG reusing cookie
+15:59:23,296 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+15:59:23,487 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+15:59:23,488 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+15:59:23,488 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+15:59:23,488 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+15:59:23,490 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+15:59:23,709 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711310363&period2=1711880963&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+15:59:23,764 yfinance DEBUG response code=200
+15:59:23,764 yfinance DEBUG    Exiting get()
+15:59:23,778 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+15:59:23,791 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+15:59:23,796 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+15:59:23,799 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+15:59:23,799 yfinance DEBUG   Exiting history()
+15:59:23,799 yfinance DEBUG  Exiting history()
+15:59:23,799 yfinance DEBUG Exiting download()
+15:59:23,955 root INFO Downloaded data from YFinance for AAPL containing 1554 records
+16:00:11,952 yfinance DEBUG Entering download()
+16:00:11,952 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:00:11,952 yfinance DEBUG  Entering history()
+16:00:11,954 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:00:11,954 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+16:00:11,977 yfinance DEBUG   Entering history()
+16:00:11,978 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 16:00:11-04:00', 'period2': '2024-03-31 06:30:11-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:00:11,979 yfinance DEBUG    Entering get()
+16:00:11,979 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+16:00:11,979 yfinance DEBUG params={'period1': 1711310411, 'period2': 1711881011, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:00:11,979 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:00:11,979 yfinance DEBUG cookie_mode = 'basic'
+16:00:11,979 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:00:11,980 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:00:11,980 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:00:11,980 yfinance DEBUG loaded persistent cookie
+16:00:11,980 yfinance DEBUG reusing cookie
+16:00:11,989 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:00:12,229 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:00:12,229 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:00:12,230 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:00:12,230 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:00:12,232 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:00:12,456 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711310411&period2=1711881011&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:00:12,512 yfinance DEBUG response code=200
+16:00:12,513 yfinance DEBUG    Exiting get()
+16:00:12,524 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+16:00:12,532 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:00:12,535 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:00:12,538 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:00:12,538 yfinance DEBUG   Exiting history()
+16:00:12,538 yfinance DEBUG  Exiting history()
+16:00:12,539 yfinance DEBUG Exiting download()
+16:00:12,661 root INFO Downloaded data from YFinance for AAPL containing 1554 records
+16:07:29,21 yfinance DEBUG Entering download()
+16:07:29,21 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:07:29,21 yfinance DEBUG  Entering history()
+16:07:29,25 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:07:29,25 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+16:07:29,47 yfinance DEBUG   Entering history()
+16:07:29,50 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 16:07:29-04:00', 'period2': '2024-03-31 06:37:29-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:07:29,50 yfinance DEBUG    Entering get()
+16:07:29,50 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+16:07:29,50 yfinance DEBUG params={'period1': 1711310849, 'period2': 1711881449, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:07:29,50 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:07:29,50 yfinance DEBUG cookie_mode = 'basic'
+16:07:29,50 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:07:29,51 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:07:29,51 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:07:29,51 yfinance DEBUG loaded persistent cookie
+16:07:29,51 yfinance DEBUG reusing cookie
+16:07:29,70 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:07:29,267 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:07:29,267 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:07:29,267 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:07:29,267 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:07:29,269 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:07:29,475 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711310849&period2=1711881449&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:07:29,561 yfinance DEBUG response code=200
+16:07:29,562 yfinance DEBUG    Exiting get()
+16:07:29,570 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+16:07:29,580 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:07:29,584 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:07:29,586 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:07:29,586 yfinance DEBUG   Exiting history()
+16:07:29,586 yfinance DEBUG  Exiting history()
+16:07:29,586 yfinance DEBUG Exiting download()
+16:07:29,764 root INFO Downloaded data from YFinance for AAPL containing 1554 records
+16:14:18,677 yfinance DEBUG Entering download()
+16:14:18,677 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:14:18,677 yfinance DEBUG  Entering history()
+16:14:18,681 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:14:18,681 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+16:14:18,703 yfinance DEBUG   Entering history()
+16:14:18,706 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 16:14:18-04:00', 'period2': '2024-03-31 06:44:18-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:14:18,706 yfinance DEBUG    Entering get()
+16:14:18,706 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+16:14:18,706 yfinance DEBUG params={'period1': 1711311258, 'period2': 1711881858, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:14:18,706 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:14:18,706 yfinance DEBUG cookie_mode = 'basic'
+16:14:18,706 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:14:18,707 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:14:18,707 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:14:18,707 yfinance DEBUG loaded persistent cookie
+16:14:18,707 yfinance DEBUG reusing cookie
+16:14:18,732 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:14:18,930 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:14:18,930 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:14:18,930 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:14:18,930 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:14:18,933 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:14:19,148 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711311258&period2=1711881858&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:14:19,216 yfinance DEBUG response code=200
+16:14:19,217 yfinance DEBUG    Exiting get()
+16:14:19,231 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+16:14:19,245 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:19,250 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:19,253 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:19,253 yfinance DEBUG   Exiting history()
+16:14:19,253 yfinance DEBUG  Exiting history()
+16:14:19,253 yfinance DEBUG Exiting download()
+16:14:19,394 root INFO Downloaded data from YFinance for AAPL containing 1554 records
+16:14:22,512 yfinance DEBUG Entering download()
+16:14:22,512 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:14:22,512 yfinance DEBUG  Entering history()
+16:14:22,513 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:14:22,513 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['ABT', 1, 0])
+16:14:22,513 yfinance DEBUG   Entering _fetch_ticker_tz()
+16:14:22,513 yfinance DEBUG    Entering get()
+16:14:22,513 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/ABT
+16:14:22,513 yfinance DEBUG params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+16:14:22,513 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:14:22,514 yfinance DEBUG cookie_mode = 'basic'
+16:14:22,514 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:14:22,514 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:14:22,514 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:14:22,514 yfinance DEBUG loaded persistent cookie
+16:14:22,514 yfinance DEBUG reusing cookie
+16:14:22,523 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:14:22,735 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:14:22,735 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:14:22,735 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:14:22,735 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:14:22,738 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:14:23,8 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/ABT?range=1d&interval=1d&crumb=DMGWSU.ZFdw HTTP/1.1" 200 1137
+16:14:23,8 yfinance DEBUG response code=200
+16:14:23,9 yfinance DEBUG    Exiting get()
+16:14:23,9 yfinance DEBUG   Exiting _fetch_ticker_tz()
+16:14:23,33 peewee DEBUG ('BEGIN', None)
+16:14:23,33 peewee DEBUG ('INSERT INTO "_kv" ("key", "value") VALUES (?, ?)', ['ABT', 'America/New_York'])
+16:14:23,34 yfinance DEBUG   Entering history()
+16:14:23,36 yfinance DEBUG ABT: Yahoo GET parameters: {'period1': '2024-03-24 16:14:22-04:00', 'period2': '2024-03-31 06:44:23-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:14:23,36 yfinance DEBUG    Entering get()
+16:14:23,36 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/ABT
+16:14:23,36 yfinance DEBUG params={'period1': 1711311262, 'period2': 1711881863, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:14:23,36 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:14:23,36 yfinance DEBUG cookie_mode = 'basic'
+16:14:23,36 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:14:23,36 yfinance DEBUG reusing cookie
+16:14:23,36 yfinance DEBUG reusing crumb
+16:14:23,36 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:14:23,36 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:14:23,127 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/ABT?period1=1711311262&period2=1711881863&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:14:23,176 yfinance DEBUG response code=200
+16:14:23,176 yfinance DEBUG    Exiting get()
+16:14:23,181 yfinance DEBUG ABT: yfinance received OHLC data: 2024-03-25 13:31:00 -> 2024-03-28 20:00:00
+16:14:23,186 yfinance DEBUG ABT: OHLC after cleaning: 2024-03-25 09:31:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:23,187 yfinance DEBUG ABT: OHLC after combining events: 2024-03-25 09:31:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:23,189 yfinance DEBUG ABT: yfinance returning OHLC: 2024-03-25 09:31:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:14:23,189 yfinance DEBUG   Exiting history()
+16:14:23,189 yfinance DEBUG  Exiting history()
+16:14:23,189 yfinance DEBUG Exiting download()
+16:14:23,272 root INFO Downloaded data from YFinance for ABT containing 1551 records
+16:17:05,977 yfinance DEBUG Entering download()
+16:17:05,977 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:17:05,977 yfinance DEBUG  Entering history()
+16:17:05,981 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:17:05,981 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+16:17:06,2 yfinance DEBUG   Entering history()
+16:17:06,5 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 16:17:05-04:00', 'period2': '2024-03-31 06:47:06-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:17:06,5 yfinance DEBUG    Entering get()
+16:17:06,5 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+16:17:06,5 yfinance DEBUG params={'period1': 1711311425, 'period2': 1711882026, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:17:06,5 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:17:06,5 yfinance DEBUG cookie_mode = 'basic'
+16:17:06,5 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:17:06,6 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:17:06,6 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:17:06,6 yfinance DEBUG loaded persistent cookie
+16:17:06,6 yfinance DEBUG reusing cookie
+16:17:06,38 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:17:06,254 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:17:06,254 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:17:06,255 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:17:06,255 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:17:06,257 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:17:06,507 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711311425&period2=1711882026&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:17:06,571 yfinance DEBUG response code=200
+16:17:06,572 yfinance DEBUG    Exiting get()
+16:17:06,587 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+16:17:06,600 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:17:06,605 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:17:06,608 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:17:06,608 yfinance DEBUG   Exiting history()
+16:17:06,608 yfinance DEBUG  Exiting history()
+16:17:06,608 yfinance DEBUG Exiting download()
+16:17:06,766 root INFO Downloaded data from YFinance for AAPL containing 1554 records
+16:20:30,303 yfinance DEBUG Entering download()
+16:20:30,304 yfinance DEBUG Disabling multithreading because DEBUG logging enabled
+16:20:30,304 yfinance DEBUG  Entering history()
+16:20:30,307 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+16:20:30,308 peewee DEBUG ('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+16:20:30,330 yfinance DEBUG   Entering history()
+16:20:30,332 yfinance DEBUG AAPL: Yahoo GET parameters: {'period1': '2024-03-24 16:20:30-04:00', 'period2': '2024-03-31 06:50:30-04:00', 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:20:30,332 yfinance DEBUG    Entering get()
+16:20:30,332 yfinance DEBUG url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+16:20:30,332 yfinance DEBUG params={'period1': 1711311630, 'period2': 1711882230, 'interval': '1m', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+16:20:30,332 yfinance DEBUG     Entering _get_cookie_and_crumb()
+16:20:30,332 yfinance DEBUG cookie_mode = 'basic'
+16:20:30,332 yfinance DEBUG      Entering _get_cookie_and_crumb_basic()
+16:20:30,333 peewee DEBUG ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+16:20:30,333 peewee DEBUG ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+16:20:30,333 yfinance DEBUG loaded persistent cookie
+16:20:30,333 yfinance DEBUG reusing cookie
+16:20:30,375 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+16:20:30,600 urllib3.connectionpool DEBUG https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+16:20:30,601 yfinance DEBUG crumb = 'DMGWSU.ZFdw'
+16:20:30,601 yfinance DEBUG      Exiting _get_cookie_and_crumb_basic()
+16:20:30,601 yfinance DEBUG     Exiting _get_cookie_and_crumb()
+16:20:30,604 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+16:20:30,870 urllib3.connectionpool DEBUG https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1711311630&period2=1711882230&interval=1m&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=DMGWSU.ZFdw HTTP/1.1" 200 None
+16:20:30,936 yfinance DEBUG response code=200
+16:20:30,936 yfinance DEBUG    Exiting get()
+16:20:30,950 yfinance DEBUG AAPL: yfinance received OHLC data: 2024-03-25 13:30:00 -> 2024-03-28 20:00:00
+16:20:30,963 yfinance DEBUG AAPL: OHLC after cleaning: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:20:30,968 yfinance DEBUG AAPL: OHLC after combining events: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:20:30,971 yfinance DEBUG AAPL: yfinance returning OHLC: 2024-03-25 09:30:00-04:00 -> 2024-03-28 15:59:00-04:00
+16:20:30,971 yfinance DEBUG   Exiting history()
+16:20:30,971 yfinance DEBUG  Exiting history()
+16:20:30,971 yfinance DEBUG Exiting download()
+16:20:31,119 root INFO Downloaded data from YFinance for AAPL containing 1554 records
