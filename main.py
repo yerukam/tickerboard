@@ -16,7 +16,7 @@ import plotly.express as px
 #                     datefmt='%H:%M:%S',
 #                     level=logging.DEBUG)
 
-engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
 
 # parser.add_argument('-t', '--ticker',
 #                     type = str,
