@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 
 
 def migrate_data():
-    df = pd.read_csv('/Users/pvalluri09/Downloads/archive/symbols.csv')
+    df = pd.read_csv('./archive/symbols.csv')
     cols = ['Nasdaq Traded','Listing Exchange','Market Category','ETF','Round Lot Size','Test Issue','Financial Status','CQS Symbol','NASDAQ Symbol','NextShares']
     df.drop(cols,inplace=True,axis=1)
     df.columns = ["symbol", "name"]
