@@ -9,7 +9,7 @@ import pandas as pd
 from mysql.connector import Error
 
 def fetch_ticker_data(ticker: str, start_date, end_date) -> pd.DataFrame:
-    engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+    engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
     if sqlalchemy.inspect(engine).has_table(ticker):
         data = pd.read_sql(f"select * from {ticker}", engine)
     else:
@@ -22,7 +22,7 @@ def fetch_ticker_data(ticker: str, start_date, end_date) -> pd.DataFrame:
 
 
 def fetch_portfolio():
-    engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+    engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
     if sqlalchemy.inspect(engine).has_table("portfolio"):
         portfolio = pd.read_sql("select * from portfolio", engine)
         return portfolio
@@ -32,7 +32,7 @@ def fetch_portfolio():
 
 def add_to_portfolio(ticker: str, name: str):
     columns = ["ticker","city","state","zip","country","website","sector","open","dayLow","dayHigh","payoutRatio","beta","volume","marketCap","currentPrice","targetHighPrice","totalCash"]
-    engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+    engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
     if sqlalchemy.inspect(engine).has_table("portfolio"):
         df = pd.read_sql(f"select * from portfolio where ticker='{ticker}'", engine)
         if df.shape[0] == 0:
@@ -72,9 +72,10 @@ def add_to_portfolio(ticker: str, name: str):
 def delete_stock_procedure(stock_ticker):
     try:
         # Connect to the database
-        host = "localhost"
-        user = "sqluser"
-        password = "password"
+        #mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB
+        host = "junction.proxy.rlwy.net:13793"
+        user = "root"
+        password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
         database = "Stock_DB"
         connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
         
