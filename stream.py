@@ -58,14 +58,11 @@ try:
         cursor = connection.cursor()
 
         # Call the stored procedure without parentheses
-        cursor.callproc("get_tickers")
+        cursor.execute("select * from Stock_DB.tickers;")
 
         # Process the result set returned by the stored procedure
-        results = []
-        for result in cursor.stored_results():
-            result_set = result.fetchall()
-            for row in result_set:
-                results.append(row)
+
+        results = cursor.fetchall()
 
         # Close cursor and connection
         cursor.close()
