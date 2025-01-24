@@ -3,7 +3,7 @@ import yfinance as yf
 from sqlalchemy import create_engine
 
 # Create SQLAlchemy engine
-engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
 
 # Sample DataFrame
 df = pd.DataFrame({"ticker": ["msft", "a"], "name": ["name1", "name2"]})
