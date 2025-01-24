@@ -24,7 +24,7 @@ from move_ticker_data import migrate_data
 st.title("Stock Dashboard")
 
 st.subheader("Track Stock")
-engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
 
 def setup_db():
     sql_files = os.listdir("database")
@@ -46,9 +46,10 @@ setup_db()
 
 try:
     # Connect to the database
-    host = "localhost"
-    user = "sqluser"
-    password = "password"
+    #mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB
+    host = "junction.proxy.rlwy.net:13793"
+    user = "root"
+    password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
     database = "Stock_DB"
     connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
     
