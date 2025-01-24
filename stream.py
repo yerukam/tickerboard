@@ -47,11 +47,12 @@ setup_db()
 try:
     # Connect to the database
     #mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB
-    host = "junction.proxy.rlwy.net:13793"
+    host = "junction.proxy.rlwy.net"
     user = "root"
+    port = 13793
     password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
     database = "Stock_DB"
-    connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
+    connection = mysql.connector.connect(host=host, port=port, user=user, password=password, database=database)
     
     if connection.is_connected():
         cursor = connection.cursor()
