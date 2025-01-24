@@ -8,7 +8,7 @@ def migrate_data():
     cols = ['Nasdaq Traded','Listing Exchange','Market Category','ETF','Round Lot Size','Test Issue','Financial Status','CQS Symbol','NASDAQ Symbol','NextShares']
     df.drop(cols,inplace=True,axis=1)
     df.columns = ["symbol", "name"]
-    engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+    engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_DB', echo=False)
     try:
         df.to_sql(name='tickers', con=engine, if_exists = 'append', index=False)
     except Exception as e:
