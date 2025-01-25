@@ -44,16 +44,18 @@ if ticker:
         fundamental_data,news=st.tabs(["Fundamental Data","Top 3 News"])
 
         with fundamental_data:
-            engine = create_engine('mysql+mysqlconnector://sqluser:password@localhost:3306/Stock_DB', echo=False)
+            engine = create_engine('mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_D', echo=False)
 
             # ticker_info=pd.read_sql("select * from fundamental_data",engine)
             try:
                 # Connect to the database
-                host = "localhost"
-                user = "sqluser"
-                password = "password"
+                # mysql+mysqlconnector://root:WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu@junction.proxy.rlwy.net:13793/Stock_D
+                host = "junction.proxy.rlwy.net"
+                port = 13793
+                user = "root"
+                password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
                 database = "Stock_DB"
-                connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
+                connection = mysql.connector.connect(host=host, port=port, user=user, password=password, database=database)
                 
                 if connection.is_connected():
                     cursor = connection.cursor()
@@ -100,11 +102,12 @@ if ticker:
 
             try:
                 # Connect to the database
-                host = "localhost"
-                user = "sqluser"
-                password = "password"
+                host = "junction.proxy.rlwy.net"
+                port = 13793
+                user = "root"
+                password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
                 database = "Stock_DB"
-                connection = mysql.connector.connect(host=host, user=user, password=password, database=database)
+                connection = mysql.connector.connect(host=host, port=, user=user, password=password, database=database)
                 
                 if connection.is_connected():
                     cursor = connection.cursor()
