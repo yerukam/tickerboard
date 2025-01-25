@@ -113,14 +113,10 @@ if ticker:
                     cursor = connection.cursor()
 
                     # Call the stored procedure without parentheses
-                    cursor.callproc("pie_chart_query")
+                    cursor.execute("select sector, avg(currentprice) as AvgCurrentPrice from fundamental_data group by sector;")
 
                     # Process the result set returned by the stored procedure
-                    results = []
-                    for result in cursor.stored_results():
-                        result_set = result.fetchall()
-                        for row in result_set:
-                            results.append(row)
+                    results = cursor.fetchall()
 
                     # Close cursor and connection
                     cursor.close()
