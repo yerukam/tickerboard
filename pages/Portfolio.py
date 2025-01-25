@@ -107,7 +107,7 @@ if ticker:
                 user = "root"
                 password = "WyUYyuPVISLqUKbJNvYxsQpYjpulGVwu"
                 database = "Stock_DB"
-                connection = mysql.connector.connect(host=host, port=, user=user, password=password, database=database)
+                connection = mysql.connector.connect(host=host, port=port, user=user, password=password, database=database)
                 
                 if connection.is_connected():
                     cursor = connection.cursor()
